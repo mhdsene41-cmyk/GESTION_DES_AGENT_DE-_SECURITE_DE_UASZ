@@ -1,0 +1,244 @@
+<mxfile host="Electron" agent="python-generator">
+  <diagram name="Diagramme de classes" id="Diagramme_de_classes">
+    <mxGraphModel dx="7715" dy="6845" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2260" pageHeight="2020" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;fontSize=23;fontStyle=1;align=center;verticalAlign=middle;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;Diagramme de classes – Plateforme de gestion des agents de sécurité de l&#39;UASZ&lt;/font&gt;" vertex="1">
+          <mxGeometry height="214" width="4370" x="170" y="-3710" as="geometry" />
+        </mxCell>
+        <mxCell id="pkgA" parent="1" style="shape=folder;strokeWidth=11;fontStyle=1;spacingTop=10;tabWidth=730;tabHeight=130;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#99FFCC;strokeColor=#000000;verticalAlign=top;align=left;spacingLeft=14;fontSize=19;gradientColor=default;" value="&lt;font style=&quot;font-size: 52px;&quot;&gt;Acteurs (héritage Utilisateur)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="2640" width="5370" x="-170" y="-3460" as="geometry" />
+        </mxCell>
+        <mxCell id="pkgB" parent="1" style="shape=folder;strokeWidth=11;fontStyle=1;spacingTop=10;tabWidth=650;tabHeight=170;tabPosition=left;html=1;whiteSpace=wrap;fillColor=#99FFCC;strokeColor=#000000;verticalAlign=top;align=left;spacingLeft=14;fontSize=19;gradientColor=default;" value="&lt;font style=&quot;font-size: 57px;&quot;&gt;Gestion opérationnelle&lt;/font&gt;" vertex="1">
+          <mxGeometry height="2320" width="4950" x="-170" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_user" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=190;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 68px;&quot;&gt;«abstract»&lt;br&gt;Utilisateur&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1060" width="950" x="2015" y="-3300" as="geometry" />
+        </mxCell>
+        <mxCell id="attr4" parent="cls_user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 57px;&quot;&gt;- idUtilisateur : int&lt;br&gt;- identifiant : string&lt;br&gt;- motDePasse : string&lt;br&gt;- role : string&lt;br&gt;- statut : string&lt;br&gt;- nom : string&lt;br&gt;- prenom : string&lt;br&gt;- telephone : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 57px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 57px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ seConnecter()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ seDeconnecter()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ modifierProfil()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="870" width="910" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_agent" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=200;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;Agent&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1050" width="900" x="80" y="-2030" as="geometry" />
+        </mxCell>
+        <mxCell id="attr8" parent="cls_agent" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 58px;&quot;&gt;- matricule : string&lt;br&gt;- adresse : string&lt;br&gt;- poste : string&lt;br&gt;- grade : string&lt;br&gt;- dateRecrutement : date&lt;br&gt;- statutPaiement : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 58px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 58px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterPlanning()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ indiquerPresence()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ signalerIncident()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterDemandes()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="850" width="650" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_ens" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=180;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;Enseignant&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1028" width="900" x="2040" y="-2010" as="geometry" />
+        </mxCell>
+        <mxCell id="attr10" parent="cls_ens" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 66px;&quot;&gt;- matricule : string&lt;br&gt;- adresseEmail : string&lt;br&gt;- departement : string&lt;br&gt;- grade : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 66px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 66px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ demanderOuvertureSalle()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ communiquerBesoins()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ signalerIncident()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ suivreTraitementDemande()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="848" width="940" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_admin" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=170;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;Administrateur&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1020" width="900" x="3080" y="-1990" as="geometry" />
+        </mxCell>
+        <mxCell id="attr6" parent="cls_admin" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 78px;&quot;&gt;- matricule : string&lt;br&gt;- adresseEmail : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 78px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 78px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ creerCompte()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ gererAgents()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterRapports()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ administrerPlateforme()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="850" width="900" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_rd" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=160;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;ResponsableDomaine&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1010" width="910" x="4140" y="-1980" as="geometry" />
+        </mxCell>
+        <mxCell id="attr12" parent="cls_rd" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 73px;&quot;&gt;- matricule : string&lt;br&gt;- adresseEmail : string&lt;br&gt;- domaine : string&lt;br&gt;- fonction : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 73px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 73px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterStatistiques()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ suivrePresences()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterInfosPersonnel()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulterRapports()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="850" width="910" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="2G1UKQz_nZh7mHQ2AYEL-9" edge="1" parent="1" source="cls_chef" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=11;" target="cls_agent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_chef" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=170;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;ChefSecurite&lt;/font&gt;" vertex="1">
+          <mxGeometry height="1028" width="760" x="1190" y="-2010" as="geometry" />
+        </mxCell>
+        <mxCell id="meth15" parent="cls_chef" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;fontColor=#333333;" value="&lt;font style=&quot;font-size: 74px;&quot;&gt;+ affecterAgent()&lt;br&gt;+ verifierPresences()&lt;br&gt;+ consulterIncidents()&lt;br&gt;+ signalerIncidentRD()&lt;/font&gt;" vertex="1">
+          <mxGeometry height="858" width="760" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_affect" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=160;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7f7f7f;strokeColor=#525252;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 61px;&quot;&gt;Affectation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="980" width="760" x="-90" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="attr16" parent="cls_affect" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 61px;&quot;&gt;- numeroAffectation : int&lt;br&gt;- secteur : string&lt;br&gt;- batiment : string&lt;br&gt;- date : date&lt;br&gt;- heureDebut : time&lt;br&gt;- heureFin : time&lt;br&gt;- etat : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 61px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 61px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ creer()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ modifier()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ cloturer()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="820" width="750" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_presence" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=160;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7f7f7f;strokeColor=#525252;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;Presence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="960" width="800" x="780" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="attr18" parent="cls_presence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 74px;&quot;&gt;- numeroPresence : int&lt;br&gt;- date : date&lt;br&gt;- heureArrivee : time&lt;br&gt;- heureDepart : time&lt;br&gt;- statut : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 74px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 74px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ enregistrer()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ verifier()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="800" width="760" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_incident" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=180;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7f7f7f;strokeColor=#525252;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;Incident&lt;/font&gt;" vertex="1">
+          <mxGeometry height="970" width="760" x="1740" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="attr20" parent="cls_incident" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;swimlaneFillColor=#FFFFFF;" value="&lt;font style=&quot;font-size: 63px;&quot;&gt;- numeroIncident : int&lt;br&gt;- date : date&lt;br&gt;- lieu : string&lt;br&gt;- description : string&lt;br&gt;- gravite : string&lt;br&gt;- statut : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 63px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 63px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ declarer()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ traiter()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ cloturer()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="790" width="740" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_demande" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=180;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7f7f7f;strokeColor=#525252;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 56px;&quot;&gt;Demande&lt;/font&gt;" vertex="1">
+          <mxGeometry height="960" width="800" x="2620" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="attr22" parent="cls_demande" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 62px;&quot;&gt;- numeroDemande : int&lt;br&gt;- typeDemande : string&lt;br&gt;- salleConcernee : string&lt;br&gt;- date : date&lt;br&gt;- heure : time&lt;br&gt;- statut : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 62px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 62px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ soumettre()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ traiter()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ suivre()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="780" width="860" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_rapport" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=170;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#7f7f7f;strokeColor=#525252;swimlaneFillColor=#FFFFFF;fontSize=17;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 56px;&quot;&gt;Rapport&lt;/font&gt;" vertex="1">
+          <mxGeometry height="940" width="760" x="3560" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="attr24" parent="cls_rapport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 68px;&quot;&gt;- numeroRapport : int&lt;br&gt;- periode : string&lt;br&gt;- type : string&lt;br&gt;- dateGeneration : date&lt;br&gt;- statistiques : string&lt;br&gt;- statut : string&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 68px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 68px;&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ generer()&lt;/span&gt;&lt;br style=&quot;color: rgb(51, 51, 51);&quot;&gt;&lt;span style=&quot;color: rgb(51, 51, 51);&quot;&gt;+ consulter()&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="770" width="710" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_affect" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=192;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6d9f2;strokeColor=#8064a2;swimlaneFillColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;«enumeration»&lt;br&gt;StatutAffectation&lt;/font&gt;" vertex="1">
+          <mxGeometry height="672" width="590" x="-50" y="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_affect" parent="enum_affect" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 67px;&quot;&gt;Planifiée&lt;br&gt;En cours&lt;br&gt;Terminée&lt;br&gt;Annulée&lt;/font&gt;" vertex="1">
+          <mxGeometry height="480" width="310" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_presence" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=200;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6d9f2;strokeColor=#8064a2;swimlaneFillColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;«enumeration»&lt;br&gt;StatutPresence&lt;/font&gt;" vertex="1">
+          <mxGeometry height="680" width="575" x="820" y="1594" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_presence" parent="enum_presence" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 68px;&quot;&gt;Présent&lt;br&gt;Absent&lt;br&gt;Retard&lt;br&gt;Justifié&lt;/font&gt;" vertex="1">
+          <mxGeometry height="480" width="360" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_incident" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=196;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6d9f2;strokeColor=#8064a2;swimlaneFillColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;«enumeration»&lt;br&gt;StatutIncident&lt;/font&gt;" vertex="1">
+          <mxGeometry height="680" width="470" x="1550" y="1594" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_incident" parent="enum_incident" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 67px;&quot;&gt;Déclaré&lt;br&gt;En traitement&lt;br&gt;Résolu&lt;br&gt;Clôturé&lt;/font&gt;" vertex="1">
+          <mxGeometry height="484" width="470" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_demande" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=192;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6d9f2;strokeColor=#8064a2;swimlaneFillColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;«enumeration»&lt;br&gt;StatutDemande&lt;/font&gt;" vertex="1">
+          <mxGeometry height="692" width="510" x="2380" y="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_demande" parent="enum_demande" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 66px;&quot;&gt;Soumise&lt;br&gt;En traitement&lt;br&gt;Approuvée&lt;br&gt;Rejetée&lt;/font&gt;" vertex="1">
+          <mxGeometry height="500" width="420" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="enum_rapport" parent="1" style="swimlane;strokeWidth=2;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=172;horizontalStack=1;resizeParent=0;resizeParentMax=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#e6d9f2;strokeColor=#8064a2;swimlaneFillColor=#FFFFFF;fontSize=16;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;«enumeration»&lt;br&gt;StatutRapport&lt;/font&gt;" vertex="1">
+          <mxGeometry height="692" width="490" x="3480" y="1598" as="geometry" />
+        </mxCell>
+        <mxCell id="ev_rapport" parent="enum_rapport" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=10;spacingTop=4;spacingBottom=4;whiteSpace=wrap;html=1;fontSize=15;" value="&lt;font style=&quot;font-size: 65px;&quot;&gt;Généré&lt;br&gt;Validé&lt;br&gt;Archivé&lt;/font&gt;" vertex="1">
+          <mxGeometry height="520" width="400" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="e26" edge="1" parent="1" source="cls_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;endSize=16;html=1;fontSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;strokeColor=#1f1f1f;strokeWidth=10.5;" target="cls_user" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3530" y="-2110" />
+              <mxPoint x="2510" y="-2110" />
+              <mxPoint x="2510" y="-2190" />
+              <mxPoint x="2490" y="-2190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" edge="1" parent="1" source="cls_agent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;endSize=16;html=1;fontSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;strokeColor=#1f1f1f;strokeWidth=10.5;" target="cls_user" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e28" edge="1" parent="1" source="cls_ens" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;endSize=16;html=1;fontSize=14;exitX=0.5;exitY=0;strokeColor=#1f1f1f;strokeWidth=10.5;exitDx=0;exitDy=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2494.8" y="-2010" />
+            </Array>
+            <mxPoint x="2494.8" y="-1910" as="sourcePoint" />
+            <mxPoint x="2494.8" y="-2220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" edge="1" parent="1" source="cls_rd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;endFill=0;endSize=16;html=1;fontSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;strokeColor=#1f1f1f;strokeWidth=10.5;" target="cls_user" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4570" y="-2110" />
+              <mxPoint x="1535.2" y="-2110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" edge="1" parent="1" source="cls_agent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#9AC7BF;strokeWidth=14;exitX=0.2;exitY=1;entryX=0.3;entryY=0;" target="cls_affect" value="&lt;font style=&quot;font-size: 44px;&quot;&gt;est affecte a&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="-480" />
+              <mxPoint x="128" y="-480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" edge="1" parent="1" source="cls_chef" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#595959;strokeWidth=14;exitX=0.15;exitY=1;entryX=0.7;entryY=0;" target="cls_affect" value="&lt;font style=&quot;font-size: 38px;&quot;&gt;affecte&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.5172" as="geometry">
+            <mxPoint y="-2" as="offset" />
+            <Array as="points">
+              <mxPoint x="1304" y="-600" />
+              <mxPoint x="432" y="-600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" edge="1" parent="1" source="cls_agent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#A680B8;strokeWidth=14;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" target="cls_presence" value="&lt;font style=&quot;font-size: 53px;&quot;&gt;enregistre&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.4563" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="530" y="-680" />
+              <mxPoint x="1010" y="-680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" edge="1" parent="1" source="cls_chef" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#FFCCCC;strokeWidth=14;exitX=0.4;exitY=1;entryX=0.908;entryY=-0.004;entryDx=0;entryDy=0;entryPerimeter=0;" target="cls_presence" value="&lt;font style=&quot;font-size: 56px;&quot;&gt;verifie&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.3514" y="2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1494" y="300" />
+              <mxPoint x="1506.4" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" edge="1" parent="1" source="cls_agent" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#FFB570;strokeWidth=14;exitX=0.8;exitY=1;entryX=0.3;entryY=0;" target="cls_incident" value="&lt;font style=&quot;font-size: 51px;&quot;&gt;declare&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.6275" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" edge="1" parent="1" source="cls_chef" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#007FFF;strokeWidth=14;exitX=0.65;exitY=1;entryX=0.7;entryY=0;" target="cls_incident" value="&lt;font style=&quot;font-size: 57px;&quot;&gt;traite&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.5278" as="geometry">
+            <mxPoint y="-2" as="offset" />
+            <Array as="points">
+              <mxPoint x="1684" y="-420" />
+              <mxPoint x="2262" y="-420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2G1UKQz_nZh7mHQ2AYEL-11" connectable="0" parent="e36" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.0204" as="geometry">
+            <mxPoint x="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" edge="1" parent="1" source="cls_ens" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#97D077;strokeWidth=14;exitX=0.5;exitY=1;entryX=0.7;entryY=0;" target="cls_demande" value="&lt;font style=&quot;font-size: 53px;&quot;&gt;soumet&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.5049" as="geometry">
+            <mxPoint y="-2" as="offset" />
+            <Array as="points">
+              <mxPoint x="2490" y="-610" />
+              <mxPoint x="3170" y="-610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" edge="1" parent="1" source="cls_chef" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#FF0000;strokeWidth=14;exitX=0.9;exitY=1;entryX=0.3;entryY=0;" target="cls_demande" value="&lt;font style=&quot;font-size: 55px;&quot;&gt;traite&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" x="0.57" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1874" y="-490" />
+              <mxPoint x="2850" y="-490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" edge="1" parent="1" source="cls_admin" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#FFFF66;strokeWidth=14;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" target="cls_rapport" value="&lt;font style=&quot;font-size: 49px;&quot;&gt;genere&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e40" edge="1" parent="1" source="cls_rd" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=none;html=1;fontSize=14;fontStyle=1;strokeColor=#FF00FF;strokeWidth=14;exitX=0.3;exitY=1;entryX=0.8;entryY=0;" target="cls_rapport" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;consulte&lt;br&gt;1        0..*&lt;/font&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d41" edge="1" parent="1" source="cls_affect" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endFill=0;dashed=1;html=1;fontSize=14;strokeColor=#8064a2;strokeWidth=13;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="enum_affect" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d42" edge="1" parent="1" source="cls_presence" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endFill=0;dashed=1;html=1;fontSize=14;strokeColor=#8064a2;strokeWidth=13;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="enum_presence" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d43" edge="1" parent="1" source="cls_incident" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endFill=0;dashed=1;html=1;fontSize=14;strokeColor=#8064a2;strokeWidth=13;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="enum_incident" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d44" edge="1" parent="1" source="cls_demande" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endFill=0;dashed=1;html=1;fontSize=14;strokeColor=#8064a2;strokeWidth=13;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="enum_demande" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d45" edge="1" parent="1" source="cls_rapport" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=open;endFill=0;dashed=1;html=1;fontSize=14;strokeColor=#8064a2;strokeWidth=13;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" target="enum_rapport" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2G1UKQz_nZh7mHQ2AYEL-14" parent="1" style="whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="5380" y="-1720" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
